@@ -25,9 +25,17 @@ Discover commands through a small, keyboard-driven tree instead of memorizing ev
 
 Requires Pi **1.0.0**. Later releases are not yet verified. Pi itself supplies `@earendil-works/pi-coding-agent` and `@earendil-works/pi-tui`.
 
+### npm (recommended)
+
+```bash
+pi install npm:pi-keytree
+```
+
+The package is published on npm as [`pi-keytree`](https://www.npmjs.com/package/pi-keytree) and is registered as a Pi package through its manifest. Pinning a version is optional, for example `pi install npm:pi-keytree@0.1.0`. Development and test scripts never publish to npm.
+
 ### Local development / source checkout
 
-From a local checkout:
+Use this only when working on the source; it is not the recommended way to install for normal use.
 
 ```bash
 # Try only this extension for one invocation, without changing Pi settings.
@@ -38,14 +46,6 @@ pi install .
 ```
 
 The temporary command disables other extensions in that invocation; their menu actions will be unavailable. It does not disable or modify them in your saved configuration. Avoid loading another leader-menu extension on Ctrl+Space at the same time. Use `/keytree` if the activation shortcut conflicts.
-
-### npm (after publication)
-
-```bash
-pi install npm:pi-keytree
-```
-
-**This command is not available until this package is published to npm.** A valid manifest does not reserve the npm name or guarantee publishing permission. No npm publication is performed by the development or test scripts.
 
 ## Usage
 
