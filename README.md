@@ -19,7 +19,7 @@ Discover commands through a small, keyboard-driven tree instead of memorizing ev
 
 ## Screenshot
 
-<!-- Add screenshot here -->
+![Pi Keytree](screenshots/pi-keytree.png)
 
 ## Installation
 
