@@ -1,0 +1,16 @@
+{
+  "name": "pi-keytree",
+  "version": "0.1.0",
+  "description": "Hierarchical leader-key command menu for Pi.",
+  "type": "module",
+  "license": "MIT",
+  "keywords": ["pi-package", "pi", "pi-agent", "leader-key", "which-key", "keymap", "terminal", "tui", "command-menu"],
+  "files": ["index.ts", "panel.ts", "config.example.json", "README.md", "LICENSE", "docs/configuration.md"],
+  "pi": { "extensions": ["./index.ts"] },
+  "peerDependencies": {
+    "@earendil-works/pi-coding-agent": "*",
+    "@earendil-works/pi-tui": "*"
+  },
+  "devDependencies": { "jiti": "^2.7.0" },
+  "scripts": { "test": "node --test tests/keytree.test.mjs" }
+}

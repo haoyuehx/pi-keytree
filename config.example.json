@@ -1,0 +1,54 @@
+{
+  "enabled": true,
+  "activation": "ctrl+space",
+  "timeout": 0,
+  "position": "right",
+  "width": "auto",
+  "showIcons": true,
+  "showUnavailable": true,
+  "presets": {
+    "fast": { "sparkNames": ["fast", "Fast"] },
+    "review": { "sparkNames": ["review", "Review"] },
+    "main": { "sparkNames": ["main", "Main"] }
+  },
+  "menu": {
+    "a": { "label": "Agent", "icon": "󰘧", "children": {
+      "s": { "label": "Scout", "action": "prefill", "command": "/run scout ", "requires": "run" },
+      "w": { "label": "Worker", "action": "prefill", "command": "/run worker ", "requires": "run" },
+      "r": { "label": "Reviewer", "action": "prefill", "command": "/run reviewer ", "requires": "run" },
+      "o": { "label": "Oracle", "action": "prefill", "command": "/run oracle ", "requires": "run" },
+      "f": { "label": "Fleet", "action": "command", "command": "/subagents-fleet" }
+    } },
+    "s": { "label": "Session", "icon": "󰆍", "children": {
+      "n": { "label": "New session [Enter]", "action": "prefill", "command": "/new", "idle": true },
+      "r": { "label": "Resume [Enter]", "action": "prefill", "command": "/resume", "idle": true },
+      "t": { "label": "Session tree [Enter]", "action": "prefill", "command": "/tree", "idle": true },
+      "i": { "label": "Session info [Enter]", "action": "prefill", "command": "/session" }
+    } },
+    "g": { "label": "Git", "icon": "", "children": {
+      "d": { "label": "Working diff", "action": "command", "command": "/diff", "git": true, "idle": true },
+      "c": { "label": "Staged diff", "action": "command", "command": "/diff --cached", "git": true, "idle": true },
+      "b": { "label": "Branch diff", "action": "branchDiff", "git": true, "idle": true }
+    } },
+    "m": { "label": "Model", "icon": "󰘦", "children": {
+      "m": { "label": "Model picker [Enter]", "action": "prefill", "command": "/model", "idle": true },
+      "p": { "label": "Preset picker", "action": "presetPicker", "idle": true },
+      "f": { "label": "Fast preset", "action": "preset", "preset": "fast", "idle": true },
+      "r": { "label": "Review preset", "action": "preset", "preset": "review", "idle": true },
+      "a": { "label": "Main preset", "action": "preset", "preset": "main", "idle": true }
+    } },
+    "q": { "label": "Quota", "icon": "󰄬", "children": {
+      "q": { "label": "All quotas", "action": "command", "command": "/quotas" },
+      "c": { "label": "Codex quotas", "action": "command", "command": "/codex:quotas" }
+    } },
+    "p": { "label": "Project", "icon": "󰏗", "children": {
+      "r": { "label": "Reload Pi [Enter]", "action": "prefill", "command": "/reload", "idle": true },
+      "c": { "label": "Configuration (read only)", "action": "projectConfig" },
+      "a": { "label": "AGENTS.md (read only)", "action": "agentsFile" }
+    } },
+    "x": { "label": "MCP", "icon": "󰒍", "children": {
+      "m": { "label": "MCP status", "action": "command", "command": "/mcp-adapter status" },
+      "s": { "label": "MCP setup", "action": "command", "command": "/mcp-adapter setup", "idle": true }
+    } }
+  }
+}
